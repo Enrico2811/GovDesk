@@ -27,6 +27,14 @@ A aplicação sobe por padrão em `http://127.0.0.1:5000`.
 
 ## Equipe e papéis
 
+## Equipe e papéis
+
+| Papel | Quem assume | O que faz |
+|-------|-------------|-----------|
+| **Dev Lead** | Raiza Antoneli | Define a arquitetura e os padrões de código, desenvolve o núcleo da aplicação, revisa os Pull Requests e resolve impedimentos técnicos |
+| **Product Owner / CIO** | Guilherme Souto | Levanta os requisitos, prioriza o backlog, valida as entregas e faz a ponte com as partes interessadas |
+| **QA / Auditoria** | Enrico do Carmo | Elabora e executa os testes, registra bugs, faz testes de regressão e audita o cumprimento dos padrões definidos |
+
 ### Raiza Antoneli — Dev Lead
 
 Responsável técnica pelo projeto. Define a arquitetura da aplicação, a organização de pastas e os padrões de código que o time segue.
