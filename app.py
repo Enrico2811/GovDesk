@@ -11,9 +11,9 @@ chamados = [
 ]
  
 equipe = [
-    {"nome": "Nome do Aluno 1", "papel": "Product Owner / CIO"},
-    {"nome": "Nome do Aluno 2", "papel": "Dev Lead"},
-    {"nome": "Nome do Aluno 3", "papel": "QA / Auditoria"},
+    {"nome": "Raiza Antoneli Cavalcante dos Santos", "papel": "Dev Lead"},
+    {"nome": "Guilherme Souto de Oliveira", "papel": "Product Owner / CIO"},
+    {"nome": "Enrico do Carmo Matheus", "papel": "QA / Auditoria"},
 ]
  
  
