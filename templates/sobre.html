@@ -1,19 +1,47 @@
 {% extends "base.html" %}
+
+{% block titulo %}Sobre o projeto{% endblock %}
+
 {% block content %}
-  <h2 style="color:#1E2761;">Equipe do Projeto</h2>
-  <table>
-    <tr>
-      <th>Integrante</th>
-      <th>Papel</th>
-    </tr>
-    {% for pessoa in equipe %}
-    <tr>
-      <td>{{ pessoa.nome }}</td>
-      <td>{{ pessoa.papel }}</td>
-    </tr>
-    {% endfor %}
-  </table>
-  <p style="margin-top:24px; color:#6B7280; font-size:13px;">
-    ITI004 — Gestão e Governança de TI · Projeto GovDesk
+  <p class="abertura">
+    O GovDesk existe para tirar as solicitações de RH do e-mail e colocá-las numa
+    fila que todo mundo enxerga.
+  </p>
+
+  <h2>O problema</h2>
+  <p>
+    A entrada de novos colaboradores e os pedidos internos de RH hoje se perdem entre
+    e-mails e mensagens avulsas. Sem uma fila visível, ninguém sabe o que já foi
+    respondido, quem ficou responsável nem o que está prestes a estourar o prazo.
+  </p>
+
+  <h2>O que o sistema faz</h2>
+  <p>
+    Reúne os chamados num painel único, cada um com status, prioridade e responsável.
+    As próximas entregas incluem atribuição automática de responsável e aviso quando
+    um chamado muda de estado.
+  </p>
+
+  <h2>Como saberemos se deu certo</h2>
+  <ul class="metas">
+    <li>
+      <strong>Menos de 24 horas</strong>
+      <span>Tempo médio de atendimento de um chamado, do registro à conclusão.</span>
+    </li>
+    <li>
+      <strong>Acima de 80%</strong>
+      <span>Chamados resolvidos já no primeiro contato, sem idas e voltas.</span>
+    </li>
+  </ul>
+
+  <h2>Entrega desta semana</h2>
+  <p>
+    Abertura e listagem de chamados com controle de status — aberto, em andamento e
+    concluído — e filtro por prioridade.
+  </p>
+
+  <p class="nota">
+    Projeto acadêmico da Fatec. O código está em desenvolvimento e a fila de chamados
+    ainda usa dados de exemplo.
   </p>
 {% endblock %}
