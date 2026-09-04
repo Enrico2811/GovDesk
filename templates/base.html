@@ -2,10 +2,10 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <title>RH System</title>
+    <title>Gestão de Recursos Humanos</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; color: #222; padding: 0 16px; }
-        header { border-bottom: 1px solid #0003F; padding-bottom: 12px; margin-bottom: 24px; }
+        header { border-bottom: 1px solid #1E2761; padding-bottom: 12px; margin-bottom: 24px; }
         header h1 { color: #1E2761; margin-bottom: 8px; }
         nav a { margin-right: 16px; color: #1E2761; text-decoration: none; font-weight: bold; }
         nav a:hover { text-decoration: underline; }
@@ -13,12 +13,12 @@
         th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #ddd; }
         th { background: #F4F0F0; color: #1E2761; }
         
-        /* Badges de Status / Tags de RH */
-        .status { padding: 3px 10px; border-radius: 10px; font-size: 12px; color: white; display: inline-block; }
-        .ativo { background: #28a745; }
-        .ferias { background: #ffc107; color: #000; }
-        .afastado { background: #dc3545; }
-        .pendente { background: #fd7e14; }
+        /* Badges de Status estilizados para a propriedade c.status */
+        .status { padding: 3px 10px; border-radius: 10px; font-size: 12px; color: white; display: inline-block; text-transform: capitalize; }
+        .status.ativo { background: #28a745; }
+        .status.ferias, .status.em_ferias, .status.em-ferias { background: #ffc107; color: #000; }
+        .status.afastado, .status.inativo { background: #dc3545; }
+        .status.pendente { background: #fd7e14; }
     </style>
 </head>
 <body>
