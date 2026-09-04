@@ -2,29 +2,35 @@
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
-  <title>GovDesk</title>
+  <title>GovDesk - RH Helpdesk</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 720px; margin: 40px auto; color: #222; }
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; color: #222; padding: 0 16px; }
     header { border-bottom: 1px solid #F0A03F; padding-bottom: 12px; margin-bottom: 24px; }
-    header h1 { color: #1E2761; margin-bottom: 4px; }
+    header h1 { color: #1E2761; margin-bottom: 8px; }
     nav a { margin-right: 16px; color: #1E2761; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
     table { width: 100%; border-collapse: collapse; margin-top: 16px; }
     th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #ddd; }
     th { background: #F4F0F0; color: #1E2761; }
-    .status { padding: 3px 10px; border-radius: 10px; font-size: 12px; color: white; }
-    .aberto { background: #09534F; }
-    .em-andamento { background: #F0A03F; }
-    .resolvido { background: #2C5F2D; }
+    
+    /* Badges de Status estilizadas para bater exatamente com as strings do app.py */
+    .status { padding: 3px 10px; border-radius: 10px; font-size: 12px; color: white; display: inline-block; font-weight: bold; }
+    .status.aberto { background: #09534F; }
+    .status.em-andamento, .status.em_andamento { background: #F0A03F; }
+    .status.resolvido { background: #2C5F2D; }
   </style>
 </head>
 <body>
   <header>
-    <h1>GovDesk</h1>
+    <h1>GovDesk - Gestão de Chamados RH</h1>
     <nav>
-      <a href="/">Chamados</a>
+      <a href="/">Chamados RH</a>
       <a href="/sobre">Sobre o Projeto</a>
     </nav>
   </header>
-  {% block content %}{% endblock %}
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
 </body>
 </html>
