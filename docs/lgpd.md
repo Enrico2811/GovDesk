@@ -1,45 +1,39 @@
 # Checklist e Mapeamento LGPD - Projeto GovDesk
 
-1. Objetivo
-Este documento visa mapear o fluxo de dados pessoais tratados pelo sistema GovDesk, que atua na automação de processos de RH, onboarding e suporte interno. O objetivo é garantir a conformidade com a LGPD (Lei 13.709/2018), assegurando que os dados dos colaboradores sejam tratados com transparência, segurança, e acesso restrito apenas aos responsáveis pelas resoluções dos chamados.
+## 1. Nosso Objetivo
+O objetivo deste documento é mostrar como o **GovDesk** cuida dos dados pessoais dos colaboradores. Como nosso sistema automatiza processos de RH e suporte interno, precisamos garantir que as informações de todos sejam tratadas com transparência, segurança e respeito à LGPD (Lei 13.709/2018). A regra básica aplicada é: o dado só é acessado por quem realmente precisa dele para resolver o chamado.
 
-2. Tabela de Mapeamento de Dados Pessoais
-Abaixo estão listados os dados pessoais coletados dos colaboradores para o funcionamento do fluxo de atendimento e automação:
+## 2. Quais dados coletamos e por quê?
+Abaixo detalhamos as informações pessoais necessárias para fazer o sistema de atendimento funcionar:
 
-Dado Pessoal.
-Finalidade no GovDesk.
-Base Legal (LGPD).
-Quem tem acesso?.
-Tempo de Armazenamento.
+**a** Dado Pessoal **b** Para que usamos? (Finalidade) **c** Base Legal (LGPD) **d** Quem pode acessar? **e** Por quanto tempo guardamos?
 
-**Nome e E-mail Corporativo**
-Identificação do colaborador que abriu o chamado e envio de notificações em tempo real.
-Art. 7º, V - Execução de contrato (trabalho).
-Analistas de RH, Suporte TI e Gestores diretos.
-Durante a vigência do contrato de trabalho (e até 5 anos após rescisão para histórico trabalhista).
+**a** Nome e E-mail Corporativo
+**b** Para identificar o autor do chamado e enviar notificações sobre o andamento do pedido em tempo real.
+**c** Art. 7º, V - Execução de contrato.
+**d** Analistas de RH, Suporte de TI e Gestores diretos.
+**e** Durante o contrato de trabalho (e até 5 anos após a saída, para histórico trabalhista). |
 
-**Cargo e Departamento**
-Utilizado pelo sistema para a atribuição automatizada de responsáveis.
-Art. 7º, IX - Legítimo Interesse (otimização de processos internos).
-Sistema automatizado, Analistas de RH.
-Idem ao Nome e E-mail.
+**a** Cargo e Setor
+**b** Para que o sistema saiba para quem encaminhar o ticket de forma automática.
+**c** Art. 7º, IX - Legítimo Interesse (otimizar processos).
+**d** Sistema automatizado e Analistas de RH.
+**e** O mesmo tempo do Nome e E-mail.
 
-**CPF ou Matrícula**
-Autenticação no painel de tickets e vinculação das solicitações ao prontuário do funcionário.
-Art. 7º, V - Execução de contrato.
-Apenas Administradores do sistema e RH nível Sênior.
-Idem ao Nome e E-mail.
+**a** CPF ou Matrícula
+**b** Para garantir o login seguro no painel e vincular a solicitação ao prontuário correto do funcionário.
+**c** Art. 7º, V - Execução de contrato.
+**d** Apenas Administradores do sistema e RH Sênior.
+**e** O mesmo tempo do Nome e E-mail.
 
-3. Tratamento de Dados Sensíveis
-**Dado Sensível Identificado:**
-Informações de Saúde (Ex: Condições especiais do paciente).
+## 3. Como lidamos com Dados Sensíveis?
 
-**Contexto no Sistema:**
-Como o GovDesk gerencia solicitações de RH, um dos fluxos do sistema é a abertura de chamados para **justificativa de faltas ou licença médica**. Nesse processo, o colaborador fará o upload de um atestado médico contendo informações de saúde (CID - Classificação Internacional de Doenças). Pela LGPD (Art. 5º, II), dados de saúde são estritamente sensíveis.
+O Dado Sensível Identificado: Informações de Saúde (Atestados médicos, condições especiais e  justificativas).
 
-**Como o GovDesk fará o tratamento (Mitigação de Riscos):**
-*   **Base Legal:** Tratamento amparado pelo **Art. 11, II, 'a'** (Cumprimento de obrigação legal ou regulatória - CLT) e **'f'** (Exercício regular de direitos em contrato).
+*O Contexto no Sistema:*
+Nosso sistema tem um fluxo para justificar faltas ou pedir licença médica, onde o colaborador faz o upload de um atestado. Como esse documento geralmente contém o CID (código da doença) ou o estado de saúde, a LGPD considera isso um dado estritamente sensível (Art. 5º, II).
 
-*   **Controle de Acesso Rigoroso:** Diferente de chamados comuns de suporte, tickets que contenham atestados médicos ("Categoria: Saúde/Licença") **não** passarão por atribuição automatizada genérica. Eles serão restritos *exclusivamente* à visualização do Departamento Médico/Segurança do Trabalho ou RH autorizado.
-
-*   **Minimização e Descarte:** O sistema não extrairá os dados do CID para o banco de dados. O arquivo (PDF/Imagem) ficará armazenado em um servidor seguro apenas pelo tempo necessário para o abono na folha de pagamento, sendo bloqueado para download por perfis não autorizados.
+**Nossas medidas de proteção (Como mitigamos os riscos):**
+* **Apoio Legal:** Fazemos esse tratamento exclusivamente para cumprir obrigações trabalhistas (Art. 11, II, 'a' e 'f' da LGPD).
+* **Acesso Restrito:** Diferente de um chamado comum (ex: "meu monitor quebrou"), um ticket com atestado médico **não** cai na fila geral de atendimento. Ele é bloqueado e liberado *apenas* para o Departamento Médico ou profissionais de RH autorizados.
+* **Coleta Mínima e Descarte:** O sistema não salva a doença (CID) no banco de dados. O arquivo (PDF ou foto) fica guardado de forma segura, sem opção de download público, e apenas pelo tempo necessário para aprovar o abono na folha de pagamento.
